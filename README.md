@@ -36,11 +36,4 @@ npm run build
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## Live Preview
-
-[Link to Application](http://weather-app-abc.netlify.app/)
-
-<iframe
-  src="http://weather-app-abc.netlify.app/"
-  style="width:100%; max-width:768px; height:800px;"
-></iframe>
+## [Demo](http://weather-app-abc.netlify.app/)
