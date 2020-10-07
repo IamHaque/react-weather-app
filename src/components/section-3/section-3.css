@@ -1,0 +1,32 @@
+/* Section 3 */
+
+.section-3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.section-3 .forecast-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-3 .forecast-item .forecast-icon {
+  margin-bottom: 0.3rem;
+}
+
+.section-3 .forecast-item .forecast-day {
+  color: var(--gray);
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+
+.section-3 .forecast-item .forecast-temp {
+  font-size: 1.1rem;
+}
+
+.section-3 .forecast-item .forecast-temp::after {
+  content: "°";
+  position: absolute;
+}

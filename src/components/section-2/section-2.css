@@ -1,0 +1,32 @@
+/* Section 2 */
+
+.section-2 {
+  display: flex;
+  font-size: 0.85rem;
+  flex-direction: column;
+}
+
+.section-2 .weather-item {
+  display: flex;
+  margin-right: 30%;
+  margin-bottom: 0.75rem;
+  justify-content: space-between;
+}
+
+.section-2 .weather-item .weather-item-left {
+  color: var(--gray);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-2 .weather-item .weather-item-right {
+  font-weight: bold;
+}
+
+/* Mobile View */
+@media only screen and (max-width: 768px) {
+  .section-2 .weather-item {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,36 @@
+/* Section 1 */
+
+.section-1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  justify-content: flex-start;
+}
+
+.section-1 .weather-icon {
+  margin-right: 1rem;
+}
+
+.section-1 .temp {
+  font-size: 3rem;
+  margin-right: 0.5rem;
+}
+
+.section-1 .temp::after {
+  content: "°";
+}
+
+.section-1 .min-max-temp {
+  display: grid;
+  font-size: 0.75rem;
+  grid-gap: 0.5rem;
+  grid-template-rows: 1fr 1fr;
+}
+
+.section-1 .min-max-temp span::after {
+  content: "°";
+}
+
+.section-1 .min-max-temp i {
+  margin-right: 0.25rem;
+}
