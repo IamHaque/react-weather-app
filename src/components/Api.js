@@ -1,4 +1,4 @@
-const API_KEY = "fe2eb0acc00f68b0f858e348da0f3050";
+const API_KEY = process.env.API_KEY;
 const API_URL = "https://api.openweathermap.org/data/2.5/weather?q=";
 const DAILY_API_URL =
   "https://api.openweathermap.org/data/2.5/onecall?units=metric&exclude=minutely,hourly";
