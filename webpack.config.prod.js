@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 const path = require("path");
 
 // call dotenv and it will return an Object with a parsed key
-const env = dotenv.config().parsed;
+const env = dotenv.config({ path: path.join(__dirname) + "/.prod.env" }).parsed;
 
 // reduce it to a nice object, the same as before
 const envKeys = Object.keys(env).reduce((prev, next) => {
@@ -31,13 +31,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
     }),
-
-    new webpack.DefinePlugin({
-      "process.env.API-KEY": envKeys.API_KEY,
-      // This global makes sure React is built in prod mode.
-      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
-      "process.env.API_URL": JSON.stringify("http://localhost:3001"),
-    }),
+    new webpack.DefinePlugin(envKeys),
     new HtmlWebpackPlugin({
       template: "src/index.html",
       favicon: "src/favicon.ico",
